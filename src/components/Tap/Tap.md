@@ -48,7 +48,7 @@
         </li>
         <li className="demo-list__item">
             <Tap scale waves fade>
-                <div className="demo-list__text">🤠 Or click me</div>
+                <div className="demo-list__text">😉 Or click me</div>
             </Tap>
         </li>
     </ul>

@@ -2,7 +2,7 @@
   "name": "react-interactions",
   "main": "dist/main.js",
   "style": "dist/main.css",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "author": "Oleg Chulakov Studio",
   "description": "React component for micro-interactions",
   "license": "MIT",

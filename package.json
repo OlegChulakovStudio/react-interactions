@@ -33,6 +33,7 @@
     "base64-inline-loader": "^1.1.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "2.3.0",
+    "chramework": "^0.1.7",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "eslint": "4.10.0",

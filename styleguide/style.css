@@ -1,0 +1,17 @@
+.demo-button {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 1em 1.5em;
+	border: none;
+	background: #06f;
+	color: #FFF;
+	font: bold 16px/1 Arial, Tahoma, sans-serif; 
+	outline: none;
+	border-radius: 4px;
+	transition: background-color 0.35s;
+	cursor: pointer;
+}
+.demo-button:hover {
+	background: #0058dc;
+}

@@ -1,5 +1,6 @@
 Example
 
-    <Tap scale fade waves>
-        <button>Click me</button>
-    </Tap>
+    <button className="demo-button">
+        Click me
+        <Tap scale fade waves />
+    </button>

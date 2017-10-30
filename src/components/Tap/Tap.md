@@ -1,4 +1,4 @@
-### Basic example. All interactions
+### All interactions example
 
     <button className="demo-button">
         Click me

@@ -4,7 +4,7 @@
 	overflow: hidden;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
-	font: bold 16px/1 Arial, Tahoma, sans-serif;
+	font: bold 16px/1 'Graphik', Arial, Tahoma, sans-serif;
 	will-change: transform;
 	transform: translateZ(0)
 }

@@ -12,7 +12,7 @@ Waves.init();
 export default class Tap extends Component {
 
 	static propTypes = {
-		/** Additional class name */
+		/** Additional classname */
 		className: string,
 		/** Enable light theme */
 		light: bool,

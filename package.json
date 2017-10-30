@@ -18,6 +18,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "gsap": "^1.20.3",
+    "node-waves": "^0.7.5",
     "prop-types": "^15.5.10",
     "react": "^16.0.0"
   },

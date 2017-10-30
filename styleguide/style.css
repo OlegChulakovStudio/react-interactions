@@ -1,18 +1,50 @@
-.demo-button {
+.demo-button,
+.demo-list__item {
 	position: relative;
 	overflow: hidden;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+	font: bold 16px/1 Arial, Tahoma, sans-serif;
+	will-change: transform;
+	transform: translateZ(0)
+}
+
+.demo-button {
 	margin: 0;
 	padding: 1em 1.5em;
 	border: none;
-	background: #06f;
-	color: #FFF;
-	font: bold 16px/1 Arial, Tahoma, sans-serif; 
-	outline: none;
+	background: #fff45f;
+	color: #151515;
 	border-radius: 4px;
-	transition: background-color 0.2s;
 	cursor: pointer;
-	-webkit-tap-highlight-color: transparent
 }
-.demo-button:hover {
-	background: #0058dc;
+.demo-button_blue {
+	background-color: #06f;
+	color: #FFF;
+}
+
+
+.demo-list {
+	display: flex;
+	max-width: 200px;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+.demo-list__item {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 1em;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	margin-top: -1px;
+}
+.demo-row__item:first-child {
+	margin-top: 0;
+}
+.demo-list__text {
+	display: inline-block;
+	will-change: transform;
 }

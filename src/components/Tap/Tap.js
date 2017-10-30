@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import { bool, node, string } from 'prop-types';
-import { TweenLite } from 'gsap'
+import { TweenLite } from 'gsap';
+import Waves from 'node-waves';
 import classnames from 'classnames';
+
+// import 'node-waves/src/stylus/waves.styl';
 import './Tap.styl';
+
+Waves.init();
 
 export default class Tap extends Component {
 
 	static propTypes = {
+		/** Additional class name */
 		className: string,
+		/** Enable light theme */
 		light: bool,
+		/** Enable waves effect */
 		waves: bool,
+		/** Enable fade effect */
 		fade: bool,
+		/** Enable scale affect */
 		scale: bool,
-		children: node
+		/** Component children */
+		children: node,
 	};
 
 	static defaultProps = {
@@ -27,6 +38,31 @@ export default class Tap extends Component {
 	state = {
 		isPressed: false
 	};
+	
+	componentDidMount() {
+		const { waves } = this.props;
+		if (waves) this.attachWaves();
+	}
+	
+	componentDidUpdate(){
+		const { waves } = this.props;
+		const attached = this.element.parentNode.classList.contains('waves-effect');
+		if (waves && !attached) {
+			this.attachWaves();
+		} else if (!waves && attached) {
+			this.destroyWaves();
+		}
+	}
+
+	attachWaves() {
+		const { light } = this.props;
+		Waves.attach(this.element.parentNode, light ? 'waves-light' : null);
+	}
+
+	destroyWaves() {
+		Waves.calm(this.element.parentNode);
+		this.element.parentNode.classList.remove('waves-effect');
+	}
 	
 	getScaleElement(){
 		const { scale, children } = this.props;
@@ -52,10 +88,11 @@ export default class Tap extends Component {
 	}
 
 	render() {
-		const { className, children, fade } = this.props;
+		const { className, children, fade, light } = this.props;
 		const { isPressed } = this.state;
 		const blockClassName = classnames({
 			'Tap': true,
+			'Tap_light': light,
 			'Tap_fade': isPressed && fade,
 			[className]: className
 		});
@@ -64,6 +101,9 @@ export default class Tap extends Component {
 				className={ blockClassName }
 				onTouchStart={ this.handleTouchStart }
 				onTouchEnd={ this.handleTouchEnd }
+				onMouseDown={ this.handleTouchStart }
+				onMouseUp={ this.handleTouchEnd }
+				onMouseLeave={ this.handleTouchEnd }
 				ref={ (element) => { this.element = element; } }
 			>
 				{ children }

@@ -9,8 +9,9 @@
 	font: bold 16px/1 Arial, Tahoma, sans-serif; 
 	outline: none;
 	border-radius: 4px;
-	transition: background-color 0.35s;
+	transition: background-color 0.2s;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent
 }
 .demo-button:hover {
 	background: #0058dc;

@@ -1,2 +1,2 @@
-
+.Tap:after{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;background:rgba(0,0,0,.1);-webkit-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;content:""}.Tap_fade:after{opacity:1}
 /*# sourceMappingURL=main.css.map*/

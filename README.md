@@ -13,7 +13,7 @@ npm install react-interactions --save
 
 Be sure to include styles at some point, probably during your bootstrapping:
 ```js
-import 'chramework/dist/main.css';
+import 'react-interactions/dist/main.css';
 ```
 
 Use `Tap` component:
@@ -30,6 +30,8 @@ const MyButton = () => {
 
 export default MyButton;
 ```
+
+Be sure that the parent element has `position: relative|absolute|fixed`
 
 
 ## Roadmap

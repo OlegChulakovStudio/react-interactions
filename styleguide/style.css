@@ -4,7 +4,7 @@
 	overflow: hidden;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
-	font: bold 16px/1 'Graphik', Arial, Tahoma, sans-serif;
+	font: bold 16px/1.5 'Graphik', Arial, Tahoma, sans-serif;
 	will-change: transform;
 	transform: translateZ(0)
 }
@@ -36,7 +36,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0;
-	padding: 1em;
+	padding: 0.75em 1em;
 	border-top: 1px solid #EEE;
 	border-bottom: 1px solid #EEE;
 	margin-top: -1px;
